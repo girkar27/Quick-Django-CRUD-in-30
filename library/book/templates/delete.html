@@ -1,0 +1,14 @@
+<html>
+<h1>Delete BOOK</h1>
+<form method="POST" >
+
+    {% csrf_token %}
+    ISBN <input type="text" name="isbn">
+    <button>Delete</button>
+    {% if messages %}
+    {% for message in messages %}
+        <p>{{message}}</p>
+    {% endfor %}
+    {% endif %}
+</form>
+</html

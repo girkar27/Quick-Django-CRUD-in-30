@@ -1,0 +1,17 @@
+<html>
+<h1>UPDATE BOOK</h1>
+<form method="POST" >
+
+    {% csrf_token %}
+    Book ISBN <input type="text" name="isbn">
+    update title <input type="text" name="title">
+    update author <input type="text" name="author"> 
+    update date <input type="date" name="date">
+    <button>Submit</button>
+    {% if messages %}
+    {% for message in messages %}
+        <p>{{message}}</p>
+    {% endfor %}
+    {% endif %}
+</form>
+</html>
